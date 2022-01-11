@@ -1,0 +1,269 @@
+body {
+    padding-bottom: 60px;
+}
+.enteteCours {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    h1 {
+        font-family: 'Antonio';
+        text-transform: uppercase;
+        color: #1B206E;
+    }
+    div {
+        padding: 0;
+    }
+    @include tablet {
+        padding-bottom: 20px;
+        padding-top: 50px;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-bottom: 0px;
+        gap: 20px;
+    }
+}
+.nomEntente {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 15px;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 0;
+    }
+}
+#sous-titreCours {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #1B206E;
+}
+.enteteSession {
+    font-family: 'Antonio';
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #28e093;
+    color: #1b206e;
+    padding: 10px;
+    @include desktop {
+        padding: 20px;
+        margin: 5px; 
+    }
+}
+.session {
+    margin-left: 0%;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    .fa,
+    .fas {
+        font-size: 70px;
+        padding: 0;
+        margin: 0;
+        color: #28e093;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        .fa,
+        .fas {
+            font-size: 40px;
+            padding: 0;
+            margin: 0;
+            gap: 0;
+            color: #28e093;
+        }
+    }
+    @include tablet {
+        margin-left: 0%;
+        margin-right: 0%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    article:hover {
+        background-color: #2C7594;
+        .fa,
+        .fas {
+            color: #1b206e;
+        }
+    }
+    article {
+        height: auto;
+        width: 80vw;
+        align-self: center;
+        flex-direction: row;
+        padding: 5px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding: 10px;
+        background-color: #1b206e;
+        margin: 1em;
+        border-radius: 8px;
+        @include desktop {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: medium 500;
+            flex-direction: column;
+            padding: 5px;
+            border-radius: 8px;
+            background-color: #1b206e;
+            margin: 0.5% 0% 0% 0%;
+            width: 25vw;
+            height: 40vh;
+            text-align: center;
+        }
+        @include tablet {
+            height: auto;
+            align-self: center;
+            width: 85vw;
+        }
+        p:nth-of-type(3) {
+            padding-top: 0px;
+            @include desktop {
+                padding-top: 15%;
+            }
+        }
+        p:nth-of-type(1) {
+            padding-top: 0px;
+            @include desktop {
+                padding-top: 15%;
+            }
+        }
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 0;
+            height: auto;
+            font-size : clamp(1rem, #{"-0.875rem + 2.333vw"}, 0.5rem);
+            @include desktop {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 2;
+            }
+            @include tablet {
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                font-size: 15px;
+            }
+        }
+        a {
+            font-family: 'Antonio', sans-serif;
+            text-transform: uppercase;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size : clamp(2rem, #{"2rem + 1.333vw"}, 0.95rem);
+            padding: 0.5em;
+            @include desktop {
+                font-size: 18px;
+            }
+            @include tablet {
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+.nomSession {
+    padding: 5px;
+    font-size: 30px;
+}
+/*************************** boutons triage **********************************/
+.btnTrieCours {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    div {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 120px;
+        height: 50px;
+        gap: 20px;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: 350px;
+        height: 100px;
+        border-radius: 10px;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+        }
+    }
+}
+.session article{
+    @include grand_ecran{
+        height: 37vh;
+    }
+    @include TresGrandEcran{
+        height: 30vh;
+    }
+}
+.btnTrieCours div {
+    background-color: #2C7594;
+    color: white;
+}
+.btnTrieCours div:hover {
+    animation: couleuranimBoutons 5s ease-in-out;
+    transition: linear;
+}
+@keyframes couleuranimBoutons {
+    0% {
+        filter: drop-shadow(0 0 0.85rem #8d14d9);
+    }
+    50% {
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+        opacity: 1;
+    }
+    80% {
+        filter: drop-shadow(0 0 0.95rem #28e093);
+        opacity: 1;
+    }
+    100% {
+        filter: drop-shadow(0 0 0.75rem #8d14d9);
+        opacity: 5;
+    }
+}

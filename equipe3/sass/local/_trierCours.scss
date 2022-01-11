@@ -1,0 +1,49 @@
+
+
+/************* ANIMATION COURS TRIAGES *****************************/
+
+.triageCours{
+    animation: animationCours ease-in 2s;
+    transition: all 1.3s ;
+}
+@keyframes animationCours{
+0%{
+    
+    opacity: 0;
+}
+100%{
+  
+    opacity: 2;
+  
+}
+
+}
+
+/************* ANIMATION COURS BOUTONS *****************************/
+
+.animationBoutonsSelect{
+    animation: animationBoutonsSelect ease-in-out 2s;
+    background: #28e093 !important;
+  
+}
+
+@keyframes animationBoutonsSelect{
+    0%{
+        box-shadow: 0 0 10px #fff; 
+        background: #28e093;
+       
+    }
+
+   
+    100%{
+        opacity: 1;
+        background-color:linear-gradient( #28e093,#234083);
+    }
+}
+
+
+
+
+
+
+

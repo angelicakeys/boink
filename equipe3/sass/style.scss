@@ -1,0 +1,269 @@
+/*!
+
+Theme Name: equipe3
+
+Theme URI: http://underscores.me/
+
+Author: Underscores.me
+
+Author URI: http://underscores.me/
+
+Description: Description
+
+Version: 1.0.0
+
+Tested up to: 5.4
+
+Requires PHP: 5.6
+
+License: GNU General Public License v2 or later
+
+License URI: LICENSE
+
+Text Domain: equipe3
+
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+
+Use it to make something cool, have fun, and share what you've learned.
+
+equipe3 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+*/
+
+/*--------------------------------------------------------------
+
+>>> TABLE OF CONTENTS:
+
+----------------------------------------------------------------
+
+# Generic
+
+- Normalize
+
+- Box sizing
+
+# Base
+
+- Typography
+
+- Elements
+
+- Links
+
+- Forms
+
+## Layouts
+
+# Components
+
+- Navigation
+
+- Posts and pages
+
+- Comments
+
+- Widgets
+
+- Media
+
+- Captions
+
+- Galleries
+
+# plugins
+
+- Jetpack infinite scroll
+
+# Utilities
+
+- Accessibility
+
+- Alignments
+
+--------------------------------------------------------------*/
+
+// Import variables and mixins.
+
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+
+# Generic
+
+--------------------------------------------------------------*/
+
+/* Normalize
+
+--------------------------------------------- */
+
+@import "generic/normalize";
+
+/* Box sizing
+
+--------------------------------------------- */
+
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+
+# Base
+
+--------------------------------------------------------------*/
+
+@import "base/base";
+
+/*--------------------------------------------------------------
+
+# Layouts
+
+--------------------------------------------------------------*/
+
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+/*--------------------------------------------------------------
+
+# Components
+
+--------------------------------------------------------------*/
+
+@import "components/components";
+
+/*--------------------------------------------------------------
+
+# Plugins
+
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+
+--------------------------------------------- */
+
+@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+
+# Utilities
+
+--------------------------------------------------------------*/
+
+/* Accessibility
+
+--------------------------------------------- */
+
+@import "utilities/accessibility";
+
+/* Alignments
+
+--------------------------------------------- */
+
+@import "utilities/alignments";
+
+/* Local entete
+
+--------------------------------------------- */
+
+@import "local/entete";
+
+/* Local footer
+/*--------------------------------------------- */
+
+@import "local/footer";
+
+/* Local menu
+
+--------------------------------------------- */
+
+@import "local/menu";
+
+/* Local menage
+
+--------------------------------------------- */
+
+@import "local/menage";
+
+/* Local texte Accueil
+
+--------------------------------------------- */
+
+@import "local/textePrincipale";
+
+/* Local gabarit page Cours
+
+--------------------------------------------- */
+
+@import "local/gabaritCours";
+
+/* Local accueil 
+
+--------------------------------------------- */
+
+@import "local/sectionAccueil";
+
+/* local burger
+
+--------------------------------------------- */
+
+@import "local/burger";
+
+/* local apropos
+
+--------------------------------------------- */
+
+@import "local/apropos";
+
+
+
+/* local cours
+
+--------------------------------------------- */
+
+@import "local/trierCours";
+
+
+
+/* local cours
+
+--------------------------------------------- */
+
+@import "local/cours";
+
+/* local professeurs
+
+--------------------------------------------- */
+
+@import "local/professeurs";
+
+/* local avenir
+
+--------------------------------------------- */
+
+@import "local/avenir";
+
+/* local vieEtudiante
+
+--------------------------------------------- */
+
+@import "local/vieEtudiante";
+
+/* local single
+
+--------------------------------------------- */
+
+@import "local/single";
+
+/* local projets
+
+--------------------------------------------- */
+
+@import "local/galerieProjets";
+

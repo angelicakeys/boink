@@ -1,0 +1,311 @@
+/*Titre de la page*/
+.titreApropos{
+    font-size: 50px;
+    font-family: 'Antonio';
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #1B206E;
+}
+//Scroll bar
+::-webkit-scrollbar{
+width: 12px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 50px;
+    background-color: #2e5e7a;
+}
+::-webkit-scrollbar-thumb{
+    border: 3px solid #2e5e7a;
+    border-radius: 50px;
+    background-color: #fff;
+}
+//La section des articles
+section.gabaritApropos{
+display: grid;
+grid-template-columns: auto;
+grid-template-areas:
+    "coordonnateurs"
+    "ecole"
+     "admission"
+     "etudiant"
+    "coordonnees"
+        "carte";
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 50px;
+    //Tous les articles
+    .apropos{
+        animation:animArticle 1s ;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+        width: 91vw;
+        @include tablet{
+            width: auto;
+        }
+        @include desktop{
+            width: auto;
+        }
+        
+        .contenu{
+            h2{
+                padding: 0%;
+            }
+            p{
+                padding: 0;
+            }
+        }
+    }
+    /*Animation*/
+@keyframes animArticle{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        transform:translateY(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*Fin animation*/
+/*Chaque articles un part un*/
+    .apropos:nth-child(1) {
+        grid-area: carte;
+        height: 30em;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+        .contenu{
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                display: none;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                iframe{
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .apropos:nth-child(2) {
+        grid-area: ecole;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .contenu{
+            h2{
+                display: none;
+            }
+            p{
+                display: none;
+            }
+            figure{
+                margin:0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    transition: 0.5s;
+                    border-radius: 8px;
+                    height: 150px;
+                }
+                img:hover{
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+    .apropos:nth-child(3) {
+    grid-area: etudiant;
+}
+.apropos:nth-child(4){
+    grid-area: coordonnateurs;
+    .contenu{
+        height: 200px;
+    }
+}
+.apropos:nth-child(5){
+    grid-area: admission;
+    h1{
+        font-family: 'Antonio';
+        color: #ffe5b6;
+        display: block;
+    }
+}
+.apropos:nth-child(6){
+    grid-area: coordonnees;
+    margin-top: 0;
+    margin-bottom: 1em;
+    margin-left: 0;
+}
+/*Tous les articles*/
+.apropos{
+        background-color: #1b206e;
+        border-radius: 8px;
+        transition: 0.5s;
+        margin-bottom: 1em;
+        h2{
+            font-family: 'Antonio';
+            color: #ffe5b6;
+            padding-left: 1em;
+            margin: 0;
+            a{
+                color: #ffe5b6;
+                font-size: 25px;
+            }
+        }
+        p{
+            font-family: 'IBM Plex Sans';  
+            color: white;
+            padding-left: 1.5em;
+            font-size: 12px;
+            a{
+                color: white;
+            }
+        }
+        ul{
+            padding: 0;
+            li{
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+    .apropos:hover{
+        background-color: #2e7694;
+    }
+//Version ordinateur
+@include desktop
+    {
+    /*Gabarit apropos*/
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "coordonnateurs admission admission"
+        "ecole admission admission"
+        "etudiant etudiant etudiant"
+        "carte carte coordonnees";
+        gap: 30px;
+        margin-left: 5em;
+        margin-right: 5em;
+        .titreApropos{
+            font-size: 50px;
+        }
+        .apropos{
+            h2{
+                a{
+                    font-size: 35px;
+                }
+            }
+            p{
+                font-size: 17px;
+            }
+            ul{
+                li{
+                    font-size: 17px;
+                }
+            }
+        }
+        .apropos:nth-child(2) {
+            grid-area: ecole;
+            padding-top: 20px;
+            .contenu{
+                h2{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+                figure{
+                    margin:0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        height: 290px;
+                    }
+                }
+            }
+        }
+        .apropos:nth-child(3) {
+            grid-area: etudiant;
+        }
+        .apropos:nth-child(4){
+            grid-area: coordonnateurs;
+            padding-bottom: 20px;
+        }
+        .apropos:nth-child(6){
+            grid-area: coordonnees;
+            margin-top: 6em;
+            margin-bottom: 6em;
+            margin-left: -3em;
+        }
+    }
+    /*Version tablette*/
+    @include tablet{
+        grid-template-areas:
+        "coordonnateurs admission "
+        "ecole admission "
+        "etudiant etudiant"
+        "carte coordonnees";
+        gap: 30px;
+        margin-left: 1em;
+        margin-right: 1em;
+        .titreApropos{
+            font-size: 40px;
+        }
+        .apropos{
+            h2{
+                a{
+                    font-size: 30px;
+                }
+            }
+            p{
+                font-size: 15px;
+            }
+            ul{
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+        .apropos:nth-child(3) {
+            grid-area: etudiant;
+            margin-right: 0;
+        }
+        .apropos:nth-child(2) {
+            grid-area: ecole;
+            background-color: #1b206e;
+            .contenu{
+                h2{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+                figure{
+                    margin:0;
+                    img{
+                        height: 180px;
+                    }
+                }
+            }
+        }
+        .apropos:nth-child(4){
+            grid-area: coordonnateurs;
+        }
+        .apropos:nth-child(6){
+            grid-area: coordonnees;
+            margin-top: 6em;
+            margin-bottom: 6em;
+            margin-left: -3em;
+        }
+    }
+}

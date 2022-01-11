@@ -1,0 +1,58 @@
+@keyframes texteAnim{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+        color: blueviolet;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+}
+.titreEntete.animation{
+    animation:texteAnim 5s ;
+}
+.titreEntete{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    flex-wrap: nowrap;
+    gap: 50px;
+}
+.titreEntete h2{
+    opacity: 1;
+    color: #1B206E;
+    padding-left: 10%;
+    font-size: 2.5em;
+}
+#primary.site-main{
+    font-family: 'IBM Plex Sans';  
+}
+.titreEntete div div{
+display: flex;
+}
+.titreEntete div > p{
+    margin: 0px 15px;
+}
+.titreEntete div > p:nth-of-type(1),.titreEntete div > p:nth-of-type(3){
+    font-family: 'Antonio';
+    text-transform: uppercase;
+    color: #28e093;
+    font-size: 2.5em;
+}
+.titreEntete div > p:nth-of-type(2){
+    font-family: 'IBM Plex Sans';  
+    font-size: 2.5em;
+}
+.titrePrincipal{
+    opacity: 1;
+    color: #1B206E;
+}
+.titrePrincipal > .boldTitre{
+    font-family: 'Antonio';
+    text-transform: uppercase;
+    color: #28e093;
+}
+.titrePrincipal.animation{
+    animation:texteAnim 5s ;
+}

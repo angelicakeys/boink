@@ -1,0 +1,72 @@
+#colophon.site-footer{ // permet au footer de rester en bas de la page
+    position: fixed;//mettre en sticky
+    width: 100vw;
+    bottom: 0;
+    z-index: 2009;
+}
+#colophon.site-footer .site-info{
+    display: flex;
+    background-color: #2e5293;
+    height:70px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5px;
+}
+.reseaux-sociaux{
+    display: flex;
+    flex: 1 3 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    width: 250px;
+}
+.reseaux-sociaux img{
+width: 32px;
+height:32px;
+perspective: 400px;
+transform: rotate(0deg);
+}
+//hover des reseaux sociaux
+.reseaux-sociaux img:hover{
+box-shadow: 50px 50px #28e093;
+background-color: #28e093;
+border-radius: 50%;
+transform: scale(0.5)translate3d(0px,0px,-30px)rotate(360deg);
+transition: all .6s;
+}
+.site-footer .nomFooter{
+    flex: 1 0 auto;
+    color: #ffe5b6;
+}
+.nomFooter{
+    font-family: "Antonio";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+@include tablet{
+    .reseaux-sociaux img{
+        width: 40px;
+        height:40px;
+        }
+        .reseaux-sociaux{
+            padding-left: 5%;
+        }
+        .nomFooter{
+            padding-right: 5%;
+        }
+        .nomFooter{
+            font-size: 18px;
+        }
+}
+@include grand_ecran{
+    .reseaux-sociaux img{
+        width: 50px;
+        height:50px;
+        }
+        .nomFooter{
+            font-size: 20px;
+        }
+}

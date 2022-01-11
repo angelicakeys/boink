@@ -1,0 +1,270 @@
+.titreAvenir{
+    font-size: 50px;
+    font-family: 'Antonio';
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #1b206e;
+}
+.contenu-avenir article:nth-child(4):hover,
+.contenu-avenir article:nth-child(5):hover,
+.contenu-avenir article:nth-child(6):hover,
+.contenu-avenir article:nth-child(7):hover{
+    transition: 0.5s;
+    background-color: #2e7694;
+} 
+.avenir{
+    width: 92vw;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 4%; 
+    animation: animArticle 1s;
+    @include tablet{
+        width: auto;
+    }
+    @include grand_ecran{
+        width: auto;
+    }
+    @include TresGrandEcran{
+        width: auto;
+    }
+    h2{  
+        font-size: 1.5em;
+        a{
+            font-family: 'Antonio';
+        }
+    }
+    .avenir:nth-child(2), .avenir:nth-child(3){
+        h2 a{
+            display: none;
+        }
+    }
+    li, p, a, a:visited, a:link{
+        font-family: 'IBM Plex Sans';
+        color: white;
+        font-size: clamp(0.85rem, 2vw, 1.2rem);
+    }
+}
+.avenir:nth-child(5), .avenir:nth-child(6), 
+.avenir:nth-child(7){
+    h2 a{
+        color:#ffe5b6;
+        position: relative;
+        right: -40px;
+        top: 5px;
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+}
+.avenir:nth-child(5){
+    grid-area: universite;
+    background-color: #1b206e;
+    border-radius: 8px;   
+    li{
+        padding-bottom: 28px;
+        position: relative;
+        left: -45px;
+        top: 20px;
+    }
+    
+}
+.avenir:nth-child(6){
+    grid-area: emplois;
+    background-color: #1b206e;
+    border-radius: 8px;
+    
+    li{
+        padding-bottom: 28px;
+        position: relative;
+        left: -45px;
+        top: 20px;
+        @include tablet{
+            left: -20px;
+        }
+        @include grand_ecran{
+            left:-30px;
+        }
+        @include TresGrandEcran{
+            left: 0;
+        }
+        
+    }
+}
+.avenir:nth-child(7){
+    grid-area: stage;
+    background-color: #1b206e;
+    border-radius: 8px;
+    li{
+        padding-top: 28px;
+        position: relative;
+        left: -45px;
+        top: -10px;
+    }
+    p{
+        position: relative;
+        left: 8px;
+        @include tablet{
+            left: 18px;
+        }
+        @include TresGrandEcran{
+            left: 28px;
+        }
+    }
+    ul li:nth-child(1), li:nth-child(3),
+    li:nth-child(6), li:nth-child(7),
+    li:nth-child(9), li:nth-child(4){
+        list-style: circle url("../../../wp-content/uploads/2021/12/petiteBouleRose.png");
+    }
+    ul li:nth-child(2), li:nth-child(5),
+    li:nth-child(8), li:nth-child(10){
+        list-style: circle url("../../../wp-content/uploads/2021/12/petiteBouleVerte.png");
+    }
+}
+
+.avenir img, .avenir figure{
+    border-radius: 8px;
+    background-color: none;
+}
+
+.avenir:nth-child(1){
+    grid-area: udem;
+    figure{
+        margin-left: 0;
+        @include tablet{
+            margin-left: 0;
+        }
+        @include grand_ecran{
+            margin-left: 30px;
+            position: relative;
+            top: -33px;
+        }
+        @include TresGrandEcran{
+            margin-left: 100px;
+            position: relative;
+            top: -10px;
+        }
+    }
+}
+.avenir:nth-child(2){
+    grid-area: uqam;
+    @include grand_ecran{
+        position: relative;
+        top: -50px;
+    }
+    @include TresGrandEcran{
+        position: relative;
+        top: -50px;
+    }
+}
+.avenir:nth-child(3){
+    grid-area: uqat;
+}
+.avenir:nth-child(4){
+    grid-area: creprog;
+    background-color: #1b206e;
+    border-radius: 8px;
+    p, h2, h1, a:any-link{
+        display: none;
+    }
+    ul{
+        width: 90%;
+        margin: 50px;
+        margin-top: 50px;
+        position: relative;
+        left: -60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 30px;
+        @include tablet{
+            top: 10px;
+            width: 90%;
+        }
+        @include TresGrandEcran{
+            top: 10px;
+        }
+        li:nth-child(1){
+            list-style: circle url("../../../wp-content/uploads/2021/12/bouleVerte-1.png");
+            list-style-position: inside;
+            @include TresGrandEcran{
+                position: relative;
+                top: -10px;
+                width: 100%;
+            }
+        }
+        li:nth-child(2){
+            list-style: circle url("../../../wp-content/uploads/2021/12/bouleRose.png");
+            list-style-position: inside;
+            @include TresGrandEcran{
+                position: relative;
+                top: 10px;
+                width: 100%;
+            }
+        } 
+    }
+    li:nth-child(1){
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 5px;
+        background-color: #265987;
+        border-radius: 8px;
+    }
+    li:nth-child(2){
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #265987;
+        border-radius: 8px;
+    } 
+}
+.contenu-avenir{
+    display: grid;
+    grid-template-columns: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    grid-template-areas:
+    "creprog"
+    "stage"
+    "universite"
+    "emplois"
+    "uqam"
+    "udem"
+    "uqat";
+    @include tablet{
+        grid-template-areas:
+        "stage creprog"
+        "stage universite"
+        "emplois uqam"
+        "emplois udem"
+        "emplois uqat";
+    }
+    @include grand_ecran{
+        grid-template-areas:
+        "stage creprog emplois"
+        "stage universite emplois"
+        "udem uqat uqam";
+    }
+    @include TresGrandEcran{
+        grid-template-areas:
+        "stage creprog emplois"
+        "stage universite emplois"
+        "udem uqat uqam";
+    }
+}
+
+@keyframes animArticle{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        transform:translateY(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,357 @@
+.main-navigation {
+    display: block;
+    width: 100%;
+    z-index: 2000;
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        ul {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            float: left;
+            position: absolute;
+            top: 100%;
+            left: -999em;
+            z-index: 99999;
+            ul {
+                left: -999em;
+                top: 0;
+            }
+            li {
+                &:hover > ul,
+                &.focus > ul {
+                    display: block;
+                    left: auto;
+                }
+            }
+            a {
+                width: 200px;
+            }
+            :hover > a,
+            .focus > a {
+            }
+            a:hover,
+            a.focus {
+            }
+        }
+        li:hover > ul,
+        li.focus > ul {
+            left: auto;
+        }
+    }
+    li {
+        position: relative;
+        &:hover > a,
+        &.focus > a {
+        }
+    }
+    a {
+        display: block;
+        text-decoration: none;
+    }
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
+    }
+}
+/*-----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
+.menu-toggle {
+    padding :0;
+    border : 0;
+    z-index: 3000;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: #1b206e;
+}
+.menu-toggle:focus {
+    outline: 1px solid #1b206e;
+    outline-offset: -4px;
+}
+.menu-toggle:active {
+    transform: scale(0.99);
+}
+.menu-toggle,
+.main-navigation.toggled{
+    #primary-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #004d64;
+        width: 100vw;
+        height: 370px; 
+        top: -40px;
+        z-index: 300;
+        a:link, a:visited{
+                display: flex;
+        }
+        @include tablet{
+            top: -4px;
+            height: 120px;
+            flex-direction: row;
+            background-color: #1b206e;
+            justify-content: space-around;
+        }
+        @include grand_ecran{
+            top: -4px;
+            height: 120px;
+            flex-direction: row;
+            background-color: #1b206e;
+            justify-content: space-around;
+        }
+        @include TresGrandEcran{
+            top: -4px;
+            height: 120px;
+            flex-direction: row;
+            background-color: #1b206e;
+            justify-content: space-around;
+        }
+    }
+}
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+@include tablet{
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: flex;
+    }
+}
+@include grand_ecran{
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: flex;
+    }
+}
+@include TresGrandEcran{
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: flex;
+    }
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    .site-main & {
+        margin: 0 0 1.5em;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-previous {
+        flex: 1 0 50%;
+    }
+    .nav-next {
+        text-align: end;
+        flex: 1 0 50%;
+    }
+}
+.main-navigation li:nth-of-type(1) a:nth-child(2),
+.main-navigation li:nth-of-type(2) a:nth-child(2),
+.main-navigation li:nth-of-type(3) a:nth-child(2){
+    position: relative;
+    left: 2px;
+    padding-top: 10px;
+    @include tablet{
+        left: -40px;
+    }
+    @include grand_ecran{
+        left: -25px;
+    }
+    @include TresGrandEcran{
+        left: -75px;
+    }   
+}
+
+.main-navigation li:nth-of-type(4) a:nth-child(2),
+.main-navigation li:nth-of-type(5) a:nth-child(2),
+.main-navigation li:nth-of-type(6) a:nth-child(2){
+    position: relative;
+    padding-top: 10px;
+    @include tablet{
+        left: 25px;
+    }
+    @include grand_ecran{
+        left: 25px;
+    }
+    @include TresGrandEcran{
+        left: 75px;
+    }
+}
+.main-navigation li:nth-of-type(4) a:nth-child(2){
+    position: relative;
+    top: 75px;
+    left: -50px;
+    @include tablet{
+        top: -50px;
+        left: 20px;
+        height: 28px;
+    }
+    @include grand_ecran{
+        top: -58px;
+        left: 25px;
+        height: 28px;
+    }
+    @include TresGrandEcran{
+        left: 80px;
+        height: 28px;
+    }
+}  
+
+.main-navigation li:nth-of-type(4) a:nth-child(1) >.icon:nth-of-type(1) {
+position: relative;
+ background-image: url(../../../wp-content/uploads/2021/11/LOGO.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+ background-position: center;
+ margin-right: 50px;
+ margin-bottom: 80px;
+ display: flex;
+ width: 100px;
+ height: 100px;
+ z-index: 99;
+}
+
+#primary-menu .icon{
+    position: relative;
+    left: 68px;
+    top: -15px;
+    margin: 0;
+    @include tablet{
+        left: -73px;
+        top: 13px;
+    }
+    @include grand_ecran{
+        left: -93px;
+        top: 13px;
+    }
+    @include TresGrandEcran{
+        left: -119px;
+        top: 13px;
+    }
+}
+
+.main-navigation li:nth-of-type(4){
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0px;
+    @include tablet{
+        padding-top: 80px;
+    }
+    @include grand_ecran{
+        padding-top: 80px;
+    }
+    @include TresGrandEcran{
+        padding-top: 80px;
+    }
+}
+.main-navigation li:nth-child(4) a:nth-child(1){
+    position: relative;
+    height: 101px;
+    top: 0;
+    right: 0;
+    left: -13px;
+    bottom: 0;
+    @include tablet{
+        height: 10px;
+        top: -98px;
+        left: 40px;
+    }
+    @include grand_ecran{
+        height: 10px;
+        top: -98px;
+        left: 40px;
+    }
+    @include TresGrandEcran{
+        height: 10px;
+        top: -98px;
+        left: 40px;
+    }
+}
+.main-navigation li:nth-of-type(4) a{
+   
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+   @include tablet{
+        margin-top: 14%; 
+   }
+   @include tablet{
+        margin-top: 14%; 
+   }
+   @include tablet{
+        margin-top: 14%; 
+   }
+}
+.main-navigation li:nth-of-type(4) a:nth-child(2){
+    padding: 20px;
+    @include tablet{
+        padding: 0;
+        position: relative;
+        left: 40px;
+        top: -40px;
+    }
+    @include grand_ecran{
+        padding: 0;
+        position: relative;
+        top: -42px;
+    }
+    @include TresGrandEcran{
+        padding: 0;
+        position: relative;
+        top: -50px;
+    }
+} 
+.main-navigation li:nth-of-type(5) a:nth-child(2)
+{
+    margin-top: 20px;
+    @include tablet{
+        margin-top: 0;
+    }
+    @include grand_ecran{
+        margin-top: 0;
+    }
+    @include TresGrandEcran{
+        margin-top: 0;
+    }
+}
+
+.main-navigation li:nth-child(1) a:active, .main-navigation li:nth-child(2) a:active,
+.main-navigation li:nth-child(3) a:active, .main-navigation li:nth-child(5) a:active,
+.main-navigation li:nth-child(6) a:active{ 
+    @include petit_ecran{
+        width: 100vw;
+        background-color: #287894;
+        display: flex;
+        justify-content: center;
+    }
+}
+.main-navigation li:nth-child(4){
+    a:nth-child(2):active{
+        background-color: #287894;
+        @include tablet{
+            background-color: #1b206e;
+        }
+        @include grand_ecran{
+            background-color: #1b206e;
+        }
+        @include TresGrandEcran{
+            background-color: #1b206e;
+        }
+    }
+}
